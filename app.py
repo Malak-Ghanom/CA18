@@ -47,7 +47,7 @@ def divide():
     number2 = int(request.form['n2'])
 
     if number2 == 0:
-        return render_template("errors/division-by-zero.html")
+        return render_template("errors/math-errors.html",message="cant divide by zero")
     
     # divide the values
     result = number1 / number2
@@ -62,7 +62,7 @@ def square_root():
     number2 = int(request.form['n2'])
 
     if number1 < 0:
-        return render_template("errors/math.html")
+        return render_template("errors/math-errors.html",message="etner a postive value")
 
     # square the values
     result = math.sqrt(number1)
